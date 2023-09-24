@@ -2,7 +2,10 @@
 
 The Copy ChatGPT LaTeX Extension is a tool that allows users to easily copy LaTeX in firefox. 
 
-This work is forked from of this extension This extension is [available in the Chrome Web Store](https://chrome.google.com/webstore/detail/chatgpt-equation-renderer/nkkkaendbndanjjndfpebmekhgdjlhkh?hl). 
+The extension will be avalibe by a link here as soon as it is avaliable. 
+
+
+This work is forked from of this a differnt extensin that is [available in the Chrome Web Store](https://chrome.google.com/webstore/detail/chatgpt-equation-renderer/nkkkaendbndanjjndfpebmekhgdjlhkh?hl). 
 
 The goal is just to copy equations in firefox as ChatGPT renders LaTeX. This code looks a bit differently and removes the renderer code as it is no longer needed. 
 
