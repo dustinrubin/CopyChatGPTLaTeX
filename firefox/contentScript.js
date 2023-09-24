@@ -4,16 +4,27 @@ class copyLaTeXGPT {
   }
 
   enableObserver() {
-    setInterval(this.createCopyEquationButtons.bind(this), 1000);
+    const observer = new MutationObserver(this.handleDomChanges.bind(this));
+    observer.observe(document.body, { childList: true, subtree: true });
+  }
+
+  handleDomChanges(mutationsList) {
+    for (const mutation of mutationsList) {
+      if (mutation.type === 'childList') {
+        this.createCopyEquationButtons();
+      }
+    }
   }
 
   createCopyEquationButtons() {
     const equations = Array.from(document.querySelectorAll(".katex:not(.copy-bound)"));
 
-    equations.forEach(equation => {
-      equation.style.cursor = "pointer";
-      equation.classList.add("copy-bound"); // Add a class to mark this element as having an event listener attached
 
+    equations.forEach(equation => {
+
+      equation.style.cursor = "pointer";
+      equation.classList.add("copy-bound"); // Mark this element as having an event listener attached
+      
       equation.addEventListener("mouseover", () => {
         equation.style.border = "1px solid #000";
         equation.style.paddingTop = "2px";

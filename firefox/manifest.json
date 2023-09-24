@@ -4,12 +4,13 @@
     "version": "1.0",
     "description": "Enables copying of LaTeX Equations on ChatGPT, simply click to copy",
     "permissions": [
-        "clipboardWrite"
-      ],      
+      "clipboardWrite"
+    ],
     "content_scripts": [
       {
-        "matches": ["*://chat.openai.com/c/*"],
-        "js": ["contentScript.js"]
+        "matches": ["*://chat.openai.com/*"],
+        "js": ["contentScript.js"],
+        "run_at": "document_end"
       }
     ],
     "icons": {
