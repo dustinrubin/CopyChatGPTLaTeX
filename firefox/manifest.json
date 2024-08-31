@@ -1,14 +1,14 @@
 {
     "manifest_version": 2,
     "name": "Copy ChatGPT LaTeX",
-    "version": "1.0",
+    "version": "1.2",
     "description": "Enables copying of LaTeX Equations on ChatGPT, simply click to copy",
     "permissions": [
       "clipboardWrite"
     ],
     "content_scripts": [
       {
-        "matches": ["*://chat.openai.com/*"],
+        "matches": ["*://chatgpt.com/*"],
         "js": ["contentScript.js"],
         "run_at": "document_end"
       }
